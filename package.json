@@ -1,6 +1,6 @@
 {
   "name": "react-native-animated-radio-button",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "Fully customizable animated radio button for React Native",
   "keywords": [
     "bouncy",
@@ -34,7 +34,9 @@
     "postversion": "git push && git push --tags"
   },
   "peerDependencies": {
-    "@freakycoder/react-native-bounceable": ">= 0.2.5"
+    "@freakycoder/react-native-bounceable": ">= 0.2.5",
+    "react": ">=17.0.0",
+    "react-native": ">=0.64.0"
   },
   "devDependencies": {
     "@types/react": "^19.0.2",
@@ -58,5 +60,18 @@
       "npx prettier --write",
       "eslint src/*.js --fix-dry-run"
     ]
-  }
+  },
+  "types": "./build/dist/RadioButton.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/dist/RadioButton.d.ts",
+      "default": "./build/dist/RadioButton.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "build",
+    "!build/dist/package.json",
+    "!build/dist/tsconfig.tsbuildinfo"
+  ]
 }
